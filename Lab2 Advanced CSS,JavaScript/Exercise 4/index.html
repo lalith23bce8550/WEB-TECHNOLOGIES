@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LocalStorage User Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>User Registration</h2>
+        <form id="registrationForm">
+            <input type="text" id="userName" placeholder="Full Name" required>
+            <input type="email" id="userEmail" placeholder="Email Address" required>
+            <input type="text" id="userMobile" placeholder="Mobile (10 digits)" required>
+            <input type="password" id="userPass" placeholder="Password (min 6 chars)" required>
+            <button type="submit">Register User</button>
+        </form>
+
+        <hr>
+
+        <h2>Registered Users</h2>
+        <button id="clearAll" class="btn-clear">Clear All Users</button>
+        <table id="userTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="userList">
+                </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
