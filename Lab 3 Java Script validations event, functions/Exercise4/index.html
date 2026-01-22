@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Activity Monitor</title>
+</head>
+<body>
+
+<h1>Security Activity Monitor</h1>
+
+<div id="interaction-zone" style="padding: 20px; border: 1px solid black;">
+    <h3>Interactive Zone</h3>
+    <input type="text" id="userInput" placeholder="Type something...">
+    <button id="testBtn">Test Button</button>
+    <a href="#" id="testLink">Sample Link</a>
+</div>
+
+<hr>
+
+<button onclick="resetLog()">Reset Log</button>
+<button onclick="exportLog()">Export Log</button>
+
+<div id="warning-box" style="color: red; font-weight: bold; min-height: 20px;"></div>
+
+<h3>Activity Log</h3>
+<ul id="activity-log"></ul>
+
+<script src="script.js"></script>
+</body>
+</html>
