@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Intelligent Shopping Cart</title>
+</head>
+<body>
+    <h1>Smart Shop</h1>
+
+    <div>
+        <h3>Available Products</h3>
+        <select id="productSelect">
+            <option value="Laptop" data-price="1000" data-cat="Electronics">Laptop ($1000)</option>
+            <option value="Phone" data-price="500" data-cat="Electronics">Phone ($500)</option>
+            <option value="Apple" data-price="2" data-cat="Grocery">Apple ($2)</option>
+            <option value="Bread" data-price="3" data-cat="Grocery">Bread ($3)</option>
+        </select>
+        <input type="number" id="prodQty" value="1" min="1">
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+
+    <hr>
+
+    <h3>Your Cart</h3>
+    <ul id="cartItems"></ul>
+
+    <div>
+        <input type="text" id="couponInput" placeholder="Enter Coupon (e.g. SAVE10)">
+        <button onclick="applyCoupon()">Apply Coupon</button>
+    </div>
+
+    <div id="cartSummary">
+        <p>Subtotal: $<span id="subtotal">0.00</span></p>
+        <p>Discounts Applied: <span id="discounts">None</span></p>
+        <p><strong>Total: $<span id="total">0.00</span></strong></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
