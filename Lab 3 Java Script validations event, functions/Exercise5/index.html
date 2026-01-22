@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multi-Stage Form Engine</title>
+</head>
+<body>
+    <h1>Project Onboarding</h1>
+    
+    <div style="width: 100%; background: #eee; height: 20px; margin-bottom: 20px;">
+        <div id="progressBar" style="width: 25%; background: blue; height: 100%; transition: 0.3s;"></div>
+    </div>
+    <p>Stage <span id="stageNumber">1</span> of 4</p>
+
+    <form id="multiStageForm" novalidate>
+        <div id="stage1" class="form-stage">
+            <h3>Step 1: Personal Details</h3>
+            <input type="text" id="firstName" placeholder="First Name" required>
+            <input type="email" id="email" placeholder="Email Address" required>
+        </div>
+
+        <div id="stage2" class="form-stage" hidden>
+            <h3>Step 2: Security</h3>
+            <input type="password" id="password" placeholder="Password (min 8 chars)" required>
+            <input type="password" id="confirmPass" placeholder="Confirm Password" required>
+        </div>
+
+        <div id="stage3" class="form-stage" hidden>
+            <h3>Step 3: Preferences</h3>
+            <label><input type="checkbox" id="terms"> I agree to terms</label><br>
+            <select id="plan">
+                <option value="">Select a Plan</option>
+                <option value="basic">Basic</option>
+                <option value="pro">Pro</option>
+            </select>
+        </div>
+
+        <div id="stage4" class="form-stage" hidden>
+            <h3>Step 4: Review & Submit</h3>
+            <div id="reviewSummary"></div>
+        </div>
+
+        <br>
+        <div id="errorBox" style="color: red; margin-bottom: 10px;"></div>
+
+        <button type="button" id="prevBtn" disabled>Previous</button>
+        <button type="button" id="nextBtn">Next</button>
+        <button type="submit" id="submitBtn" hidden>Submit Registration</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
