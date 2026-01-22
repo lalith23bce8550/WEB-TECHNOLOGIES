@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Adaptive Registration</h2>
+        <form id="registrationForm" novalidate>
+            <div class="field">
+                <input type="text" id="name" placeholder="Full Name" required>
+            </div>
+
+            <div class="field">
+                <input type="email" id="email" placeholder="Email" required>
+                <small class="error-msg" id="emailError"></small>
+            </div>
+
+            <div class="field">
+                <input type="password" id="password" placeholder="Password">
+                <small class="error-msg" id="passError"></small>
+            </div>
+
+            <div class="field">
+                <input type="password" id="confirmPassword" placeholder="Confirm Password">
+            </div>
+
+            <div class="field">
+                <input type="number" id="age" placeholder="Age">
+                <small class="error-msg" id="ageError"></small>
+            </div>
+
+            <div class="field">
+                <label>Select Role:</label>
+                <select id="role">
+                    <option value="Student">Student (@edu.com)</option>
+                    <option value="Teacher">Teacher (@staff.com)</option>
+                    <option value="Admin">Admin (@admin.com)</option>
+                </select>
+            </div>
+
+            <div id="skills-container" class="field">
+                <input type="text" id="skills" placeholder="Skills (comma separated)">
+            </div>
+
+            <button type="submit" id="submitBtn">Register</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
