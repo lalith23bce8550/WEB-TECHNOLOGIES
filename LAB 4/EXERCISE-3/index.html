@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Student Management System</h1>
+    
+    <div id="messageBox" class="message hidden"></div>
+
+    <div class="content">
+        <div class="form-section">
+            <h3 id="formTitle">Add New Student</h3>
+            <form id="studentForm">
+                <input type="hidden" id="editMode" value="false">
+                
+                <div class="form-group">
+                    <label>Student ID:</label>
+                    <input type="number" id="studentId" required placeholder="e.g. 101">
+                </div>
+                <div class="form-group">
+                    <label>Name:</label>
+                    <input type="text" id="name" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label>Department:</label>
+                    <select id="department" required>
+                        <option value="">Select Dept</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Mathematics">Mathematics</option>
+                        <option value="Physics">Physics</option>
+                        <option value="Literature">Literature</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Marks:</label>
+                    <input type="number" id="marks" required placeholder="0-100">
+                </div>
+
+                <div class="btn-group">
+                    <button type="submit" id="saveBtn" class="btn primary">Add Student</button>
+                    <button type="button" id="cancelBtn" class="btn secondary hidden">Cancel</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="table-section">
+            <h3>Student Records</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Dept</th>
+                        <th>Marks</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="studentTableBody">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
