@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML Employee Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Employee Management</h1>
+
+        <div id="notification" class="notification hidden"></div>
+
+        <div class="form-container">
+            <input type="hidden" id="editIndex" value="-1">
+            <div class="input-group">
+                <input type="number" id="empId" placeholder="ID" required>
+                <input type="text" id="empName" placeholder="Name" required>
+                <select id="empDept">
+                    <option value="IT">IT</option>
+                    <option value="HR">HR</option>
+                    <option value="Finance">Finance</option>
+                    <option value="Marketing">Marketing</option>
+                </select>
+                <input type="number" id="empSalary" placeholder="Salary" required>
+            </div>
+            <div class="btn-group">
+                <button onclick="addEmployee()" id="addBtn">Add Employee</button>
+                <button onclick="updateEmployee()" id="updateBtn" class="hidden" style="background-color: #ffc107; color: black;">Update</button>
+                <button onclick="cancelEdit()" id="cancelBtn" class="hidden" style="background-color: #6c757d;">Cancel</button>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Salary</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
