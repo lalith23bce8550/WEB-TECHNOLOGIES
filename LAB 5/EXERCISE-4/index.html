@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Inventory System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Product Inventory</h1>
+            <div class="summary-box">
+                Total Inventory Value: <span id="totalValue">$0.00</span>
+            </div>
+        </header>
+
+        <div class="search-bar">
+            <input type="text" id="searchCategory" placeholder="Search by Category (e.g. Electronics)">
+        </div>
+
+        <div class="form-panel">
+            <h3 id="formTitle">Add New Product</h3>
+            <form id="inventoryForm">
+                <input type="hidden" id="editId">
+                <div class="input-group">
+                    <input type="text" id="prodName" placeholder="Product Name" required>
+                    <input type="text" id="prodCategory" placeholder="Category" required>
+                    <input type="number" id="prodPrice" placeholder="Price ($)" step="0.01" required>
+                    <input type="number" id="prodStock" placeholder="Stock Qty" required>
+                </div>
+                <div class="action-buttons">
+                    <button type="submit" id="saveBtn" class="btn-primary">Add Product</button>
+                    <button type="button" id="cancelBtn" class="btn-secondary hidden">Cancel</button>
+                </div>
+            </form>
+            <p id="errorMsg" class="error-text hidden"></p>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Stock</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="inventoryBody">
+                </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

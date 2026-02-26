@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+    <book>
+        <id>1</id>
+        <title>The Song of Ice and Fire</title>
+        <author>George R.R.Martin</author>
+        <status>Available</status>
+    </book>
+    <book>
+        <id>2</id>
+        <title>Wings of Fire</title>
+        <author>APJ Abdul Kalam</author>
+        <status>Checked Out</status>
+    </book>
+    <book>
+        <id>3</id>
+        <title>To Kill a Mockingbird</title>
+        <author>Harper Lee</author>
+        <status>Available</status>
+    </book>
+</library>

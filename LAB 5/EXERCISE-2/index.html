@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Book Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Library Book Tracker</h1>
+
+        <div id="message" class="message hidden"></div>
+
+        <div class="control-panel">
+            <h3>Add New Book</h3>
+            <div class="input-row">
+                <input type="text" id="newTitle" placeholder="Book Title">
+                <input type="text" id="newAuthor" placeholder="Author Name">
+                <select id="newStatus">
+                    <option value="Available">Available</option>
+                    <option value="Checked Out">Checked Out</option>
+                </select>
+                <button onclick="addBook()" class="btn-add">Add Book</button>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="bookTableBody">
+                </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+body { font-family: 'Segoe UI', sans-serif; background-color: #eaeff2; padding: 20px; display: flex; justify-content: center; }
+.container { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); width: 850px; }
+
+header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 2px solid #f0f0f0; padding-bottom: 15px; }
+h1 { margin: 0; color: #333; }
+.summary-box { background: #2c3e50; color: white; padding: 10px 20px; border-radius: 8px; font-weight: bold; font-size: 1.1em; }
+
+.search-bar input { width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 6px; font-size: 16px; margin-bottom: 20px; box-sizing: border-box; }
+
+.form-panel { background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #e9ecef; }
+.input-group { display: grid; grid-template-columns: 2fr 1.5fr 1fr 1fr; gap: 10px; margin-bottom: 15px; }
+input { padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+.error-text { color: #dc3545; font-size: 0.9em; margin-top: 10px; font-weight: bold; }
+
+button { padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
+.btn-primary { background-color: #28a745; color: white; }
+.btn-primary:hover { background-color: #218838; }
+.btn-secondary { background-color: #6c757d; color: white; margin-left: 10px; }
+.action-btn { padding: 6px 12px; font-size: 0.85em; margin-right: 5px; }
+.edit-btn { background-color: #ffc107; color: #212529; }
+.delete-btn { background-color: #dc3545; color: white; }
+
+table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+th, td { padding: 12px 15px; border-bottom: 1px solid #dee2e6; text-align: left; }
+th { background-color: #343a40; color: white; }
+
+.hidden { display: none; }
