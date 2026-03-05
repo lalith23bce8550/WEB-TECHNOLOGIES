@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Book Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Online Book Finder</h1>
+            <p>Search, Filter, and Discover Books</p>
+        </header>
+
+        <!-- Search Section -->
+        <div class="search-section">
+            <h2>Search Books</h2>
+            <div class="search-form">
+                <input type="text" id="searchInput" placeholder="Search by title...">
+                <button onclick="searchBooks()">Search</button>
+            </div>
+        </div>
+
+        <!-- Filter Section -->
+        <div class="filter-section">
+            <h2>Filter by Category</h2>
+            <div class="category-buttons">
+                <button onclick="filterByCategory('Programming')">Programming</button>
+                <button onclick="filterByCategory('Data Science')">Data Science</button>
+                <button onclick="filterByCategory('Database')">Database</button>
+                <button onclick="filterByCategory('Cloud')">Cloud</button>
+                <button onclick="filterByCategory('Security')">Security</button>
+            </div>
+        </div>
+
+        <!-- Sort Section -->
+        <div class="sort-section">
+            <h2>Sort Books</h2>
+            <div class="sort-buttons">
+                <button onclick="sortBooks('price')">Sort by Price (Low to High)</button>
+                <button onclick="sortBooks('rating')">Sort by Rating (High to Low)</button>
+            </div>
+        </div>
+
+        <!-- Top Rated Section -->
+        <div class="top-rated-section">
+            <h2>🏆 Top Rated Books</h2>
+            <button onclick="loadTopRated()">Load Top Rated</button>
+        </div>
+
+        <!-- Books Display Section -->
+        <div class="books-container">
+            <h2 id="booksTitle">All Books</h2>
+            <div id="booksList">
+                <p>Loading books...</p>
+            </div>
+        </div>
+
+        <!-- Pagination Section -->
+        <div class="pagination-section">
+            <button id="prevBtn" onclick="changePage(-1)">Previous</button>
+            <span id="pageInfo">Page 1 of 1</span>
+            <button id="nextBtn" onclick="changePage(1)">Next</button>
+        </div>
+
+        <!-- Seed Button (For Testing) -->
+        <div class="seed-section">
+            <button onclick="seedDatabase()">🌱 Seed Sample Books</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
