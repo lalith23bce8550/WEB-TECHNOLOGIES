@@ -1,0 +1,237 @@
+.list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.list-title {
+  color: #333;
+  font-size: 24px;
+  margin: 0;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* ==================== INPUT LOGIC SECTION ==================== */
+/* Separated into InputComponent - Handles user input capture */
+.input-section {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #f0f4ff 100%);
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.item-input {
+  flex: 1;
+  padding: 12px 14px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+.item-input:focus {
+  outline: none;
+  border-color: #667eea;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.item-input::placeholder {
+  color: #999;
+}
+
+.add-btn {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.add-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.add-btn:active {
+  transform: translateY(0);
+}
+
+/* ==================== DISPLAY LOGIC SECTION ==================== */
+/* Separated into ItemList Component - Handles list rendering with map() */
+.list-display-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.items-header {
+  color: #333;
+  font-size: 18px;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Dynamic List Rendering using map() function */
+.items-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Each list item with key={item.id} for proper reconciliation */
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  animation: slideIn 0.3s ease;
+}
+
+.list-item:hover {
+  border-color: #667eea;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.1);
+  transform: translateX(4px);
+}
+
+.item-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 0;
+}
+
+.item-name {
+  font-size: 15px;
+  color: #333;
+  font-weight: 500;
+  word-break: break-word;
+}
+
+.item-id {
+  font-size: 12px;
+  color: #999;
+  font-family: monospace;
+}
+
+/* Remove Button - onClick event handler for removing items */
+.remove-btn {
+  background: #ffe0e0;
+  border: 2px solid #e74c3c;
+  color: #e74c3c;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  margin-left: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.remove-btn:hover {
+  background: #e74c3c;
+  color: white;
+  transform: scale(1.05);
+}
+
+.remove-btn:active {
+  transform: scale(0.98);
+}
+
+/* Empty State - Conditional Rendering when items.length === 0 */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #f0f4ff 100%);
+  border-radius: 8px;
+  border: 2px dashed #e0e0e0;
+}
+
+.empty-message {
+  color: #666;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .list-container {
+    gap: 16px;
+  }
+
+  .input-group {
+    flex-direction: column;
+  }
+
+  .add-btn {
+    width: 100%;
+  }
+
+  .list-item {
+    flex-wrap: wrap;
+    padding: 12px;
+  }
+
+  .item-content {
+    flex-basis: 100%;
+    margin-bottom: 8px;
+  }
+
+  .remove-btn {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .item-name {
+    font-size: 14px;
+  }
+
+  .item-id {
+    font-size: 11px;
+  }
+}
